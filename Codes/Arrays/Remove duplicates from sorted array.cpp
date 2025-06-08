@@ -3,18 +3,16 @@ using namespace std;
 #define ll long long
 
 class Solution {
-public:
-    int removeDuplicates(vector<int>& nums) {
-        int n = nums.size();
-        int indexSet = 0;
-        set<int> takenSetDataStructure;
-        for (auto it : takenSetDataStructure){
-            nums[indexSet] = it;
-            indexSet++;
+
+    public:
+    int RDSA(vector<int>& arr){
+        set<int> st;
+        for (auto it : st){
+            st.insert[arr[it]];
         }
-        return takenSetDataStructure.size();
-    }
-};
+        return st;
+    }    
+  };
 
 int main() {
     int t;
