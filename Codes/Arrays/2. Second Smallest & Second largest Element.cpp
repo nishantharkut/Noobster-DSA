@@ -2,49 +2,34 @@
 using namespace std;
 #define ll long long
 
-class Solution {
+class Solution
+{
 
-    public:
-      //write function here 
-    int SecondSmallestElement(vector<int> arr)    {  // Your code goes here
-        int n = arr.size();
-        if (n<2) return -1;
-        // Approach 1 : sort?
-        // Approach 2 : for loop and keep track of the largest and second largest hence [2 pointers]
-        
-        int maxIdx = INT_MIN, secondMaxIdx = INT_MIN;
-        for (int i = 0; i< n; i++){
-            if (arr[i]> arr[maxIdx]){ 
-            secondMaxIdx = maxIdx;
-            maxIdx = i;}
-            else if (arr[i] > secondMaxIdx && arr[i] != maxIdx){
-                secondMaxIdx = i;
-            }
-        }
-        return arr[secondMaxIdx];
+public:
+    //brute force: Go to onenote
+    /*
+        1. sort
+        2. second largest - : arr[n-2];
+        ----------NOT ALways -------------------
+        so, store the array in set so that there are no duplicates
+        hence, then find the second largest : arr[n-2];
+                        OR  
+        ----------this will also not work--------
 
+        if (arr[n-2]== arr[n-1]){
+        secondlargest = arr[n-3]}
+    */
+    int SecondSmallestElement(vector<int> arr)
+    {
     }
 
-    int SecondSmallestIdx(vector<int> arr){
-        int n = arr.size();
-        if (n<2) return -1;
-        int maxIdx = INT_MIN, secondMaxIdx = INT_MIN;
-        for (int i = 0; i< n; i++){
-            if (arr[i]> arr[maxIdx]){ 
-            secondMaxIdx = maxIdx;
-            maxIdx = i;}
-            else if (arr[i] > secondMaxIdx && arr[i] != maxIdx){
-                secondMaxIdx = i;
-            }
-        }
-
-        return secondMaxIdx;
+    int SecondSmallestIdx(vector<int> arr)
+    {
     }
-  };
+};
 
-
-
-int main() {
+int main()
+{
     Solution sol;
 
     // --- Test Case 1: Strictly increasing ---
