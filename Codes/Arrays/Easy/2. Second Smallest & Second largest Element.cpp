@@ -5,10 +5,12 @@ using namespace std;
 class Solution
 {
 public:
-    int SecondSmallestElement(vector<int> arr){
+    int SecondSmallestElement(vector<int> arr)
+    {
     }
 
-    int SecondSmallestIdx(vector<int> arr){
+    int SecondSmallestIdx(vector<int> arr)
+    {
     }
 };
 
